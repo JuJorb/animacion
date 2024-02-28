@@ -1,0 +1,137 @@
+/* .contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50rem;
+}
+
+.flor{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: #373737;
+    animation-name: florMovimiento;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.flor:hover{
+    animation: florMovimiento 2s forwards linear;
+}
+
+@keyframes florMovimiento {
+    100%{
+        box-shadow: 3rem 3rem #ff7e42c1,
+                             -3rem -3rem #ff7e42c1,
+                             3rem -3rem #ff7e42c1,
+                             -3rem 3rem #ff7e42c1,
+                             0rem 4rem #ff7e42c1,
+                             4rem 0rem #ff7e42c1,
+                            -0rem -4rem #ff7e42c1,
+                             -4rem -0rem #ff7e42c1;
+                             transform: rotate(360deg);
+    }
+} */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.car{
+    position: absolute;
+    margin-top: 450px;
+    margin-left: 100px;
+}
+
+.rueda{
+    position: absolute;
+    width: 65px;
+    margin-top: 717px;
+    margin-left: 205px;
+    /* animation: llantaMovimiento 1s infinite linear; */
+}
+
+.rueda-mover{
+    animation: llantaMovimiento 1s infinite linear;
+}
+
+.ruedaDos{
+    position: absolute;
+    width: 65px;
+    margin-top: 715px;
+    margin-left: 480px;
+    /* animation: llantaMovimiento 1s infinite linear; */
+}
+
+.ruedaDos-mover{
+    animation: llantaMovimiento 1s infinite linear;
+}
+
+.luce1{
+    margin-top: 614px;
+    margin-left: 550px;
+    opacity: 0;
+}
+
+.luce1-mover{
+    animation: luce 2s forwards infinite steps(4);
+    display: block;
+}
+
+.polvo{
+    width: 210px;
+    height: 135px;
+    background: url("../img/humo.png");
+    position: absolute;
+    top: 595px;
+    left: 1px;
+    z-index: 10;
+    display: none;
+    /* animation: polvo 2s forwards infinite steps(4); */
+}
+
+.polvo-mover{
+    animation: polvo 2s forwards infinite steps(4);
+    display: block;
+}
+
+.fondo{
+    position: absolute;
+    width: 100%;
+    background-size: contain ;
+    background-image: url("../img/fondo.jpg");
+   
+}
+
+.fondo-Mover{
+    animation: 5s MoverFondo infinite  linear; 
+}
+
+@keyframes polvo{
+    100%{
+        background-position-x: 785px;
+    }
+}
+
+@keyframes llantaMovimiento {
+    100%{
+                             transform: rotate(360deg);
+                            }
+                        }
+                        
+@keyframes luce{
+    100%{
+        opacity: 80%;
+    }
+    0%{
+        opacity: 0%;
+    }
+}
+
+@keyframes MoverFondo{
+        100%{
+                background-position-x: -1392px;
+        }
+}
